@@ -1,4 +1,4 @@
-## Functions below create a square matrix (n x n) and calculates the inverse of the matrix 
+## Functions below accepts matrix as input and calculates the inverse of the matrix 
 ## If available in memory inverse is fetched from there, if not it computes the inverse  and stores it in memory. 
 ## It also prints out an error message if the matrix created is singular and inverse cannot be computed
 
@@ -9,11 +9,8 @@
 ## 4.getinverse returns the inverse of the matirx
 makeCacheMatrix <- function(x = matrix()) {
     inverse <- NULL
-    n <-  sqrt(length(x))
-    x <- matrix(x,nrow = n,ncol = n )
     setmatrix <- function(y = matrix() ){
-        z <-sqrt(length(y))
-        x <<-matrix(y,nrow = z,ncol = z)
+        x <<-y
         inverse <<-NULL
     }
     getmatrix <- function() x 
